@@ -8,6 +8,7 @@
 
 
     <LinearLayout
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -16,6 +17,7 @@
 
 
         <TableLayout
+            android:style="?android:attr/buttonBarButtonStyle"
             android:id="@+id/playArea"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -30,6 +32,8 @@
                 android:gravity="center_horizontal">
 
                 <Button
+                    android:style="?android:attr/buttonBarButtonStyle"
+
                     android:id="@+id/one"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
@@ -37,6 +41,7 @@
                     android:textSize="70sp" />
 
                 <Button
+                    android:style="?android:attr/buttonBarButtonStyle"
                     android:id="@+id/two"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
@@ -44,6 +49,7 @@
                     android:textSize="70sp" />
 
                 <Button
+                    android:style="?android:attr/buttonBarButtonStyle"
                     android:id="@+id/three"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
@@ -59,6 +65,7 @@
                 android:gravity="center_horizontal">
 
                 <Button
+                    android:style="?android:attr/buttonBarButtonStyle"
                     android:id="@+id/four"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
@@ -66,6 +73,7 @@
                     android:textSize="70sp" />
 
                 <Button
+                    style="?android:attr/buttonBarButtonStyle"
                     android:id="@+id/five"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
@@ -73,6 +81,7 @@
                     android:textSize="70sp" />
 
                 <Button
+                    android:style="?android:attr/buttonBarButtonStyle"
                     android:id="@+id/six"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
@@ -87,6 +96,7 @@
                 android:gravity="center_horizontal">
 
                 <Button
+                    android:style="?android:attr/buttonBarButtonStyle"
                     android:id="@+id/seven"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
@@ -94,6 +104,7 @@
                     android:textSize="70sp" />
 
                 <Button
+                    android:style="?android:attr/buttonBarButtonStyle"
                     android:id="@+id/eight"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
@@ -101,6 +112,7 @@
                     android:textSize="70sp" />
 
                 <Button
+                    android:style="?android:attr/buttonBarButtonStyle"
                     android:id="@+id/nine"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
@@ -183,11 +195,6 @@
 
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/thining"
-        android:layout_width="wrap_content"
-        android:layout_height="29dp"
-        android:text="thinking" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab_reset"

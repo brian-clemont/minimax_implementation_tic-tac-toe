@@ -59,7 +59,6 @@ public class CpuPlay extends AppCompatActivity {
         text_ties = (TextView) findViewById(R.id.tiesCount);
         text_wins =(TextView)findViewById(R.id.winsCount);
 
-        thinkl_text = (TextView)findViewById(R.id.thining) ;
 
         random = new Random();
         for (int i = 0; i < 3; i++) {
