@@ -1,7 +1,9 @@
 package com.coutinho.brian.tictactoexoai;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
+import android.os.Vibrator;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -106,6 +108,7 @@ public class CpuPlay extends AppCompatActivity {
 
         newGame.setOnClickListener(new View.OnClickListener() {
             @Override
+
             public void onClick(View v) {
                 if (Counter % 2 == 0) {
                     try {
@@ -122,6 +125,8 @@ public class CpuPlay extends AppCompatActivity {
                     }
                     Counter++;
                 }
+                Vibrator vb = (Vibrator)   getSystemService(Context.VIBRATOR_SERVICE);
+                vb.vibrate(100);
             }
         });
 
