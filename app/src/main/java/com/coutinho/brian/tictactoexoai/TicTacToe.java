@@ -7,31 +7,30 @@ import java.util.Random;
 /**
  * Created by brian on 19/8/17.
  */
-
-public class TicTacToe {
+ class TicTacToe {
 
     // Name-constants to represent the seeds and cell contents
-    public final int EMPTY = 0;
-    public final int CROSS = 1;
-    public final int NOUGHT = 2;
+     final int EMPTY = 0;
+     final int CROSS = 1;
+     final int NOUGHT = 2;
 
     // Name-constants to represent the various states of the game
-    public final int PLAYING = 0;
-    public final int CROSS_WON = 1;
-    public final int NOUGHT_WON = 2;
-    public final int DRAW = 3;
+     final int PLAYING = 0;
+     final int CROSS_WON = 1;
+     final int NOUGHT_WON = 2;
+     final int DRAW = 3;
 
     // The game board and the game status
-    public static final int ROWS = 3, COLS = 3; // number of rows and columns
-    public static int[][] board = new int[ROWS][COLS]; // game board in 2D array
+    private static final int ROWS = 3, COLS = 3; // number of rows and columns
+    private static int[][] board = new int[ROWS][COLS]; // game board in 2D array
 
     CpuPlay cpuPlay;
 
-    public TicTacToe(CpuPlay cpuPlay) {
+     TicTacToe(CpuPlay cpuPlay) {
         this.cpuPlay = cpuPlay;
     }
 
-    public void resetBoard() {
+     void resetBoard() {
         for (int i = 0; i < 3; ++i) {
             for (int j = 0; j < 3; ++j) {
                 board[i][j] = 0;
@@ -41,12 +40,12 @@ public class TicTacToe {
 
 
     /** Get next best move for computer. Return int[2] of {row, col} */
-    public int[] move() {
+     int[] move() {
         int[] result = minimax(2, NOUGHT); // depth, max turn
         return new int[] {result[1], result[2]};   // row, col
     }
 
-    public int[] minimax(int depth, int player){
+     int[] minimax(int depth, int player){
         // Generate possible next moves in a List of int[2] of {row, col}.
         List<int[]> nextMoves = generateMoves();
 
@@ -83,7 +82,7 @@ public class TicTacToe {
         return new int[] {bestScore, bestRow, bestCol};
     }
 
-    private int evaluate() {
+     int evaluate() {
         int score = 0;
         // Evaluate score for each of the 8 lines (3 rows, 3 columns, 2 diagonals)
         score += evaluateLine(0, 0, 0, 1, 0, 2);  // row 0
@@ -98,7 +97,7 @@ public class TicTacToe {
     }
 
 
-    private int evaluateLine(int row1, int col1, int row2, int col2, int row3, int col3) {
+     int evaluateLine(int row1, int col1, int row2, int col2, int row3, int col3) {
         int score = 0;
 
         // First cell
@@ -171,11 +170,11 @@ public class TicTacToe {
         return nextMoves;
     }
 
-    public void placeAMove(int x, int y, int player) {
+    void placeAMove(int x, int y, int player) {
         board[x][y] = player;   //player = 1 for X, 2 for O
     }
 
-    public int CheckGameState() {
+     int CheckGameState() {
     /*
     0 - Playing
     1 - X Won
